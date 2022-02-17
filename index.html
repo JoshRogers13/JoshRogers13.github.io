@@ -907,6 +907,159 @@
         text-decoration: none;
     }
 
+    .atlas-4-sizing-warning {
+        background: #9df200;
+        height: auto;
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        align-items: center;
+    }
+
+    .atlas-4-sizing-warning h2 {
+        color: black;
+        font-size: 14px;
+        text-align: center;
+        font-weight: 600;
+        margin-bottom: 15px;
+        max-width: 1440px;
+    }
+
+    .warning-button {
+        width: auto;
+        padding: 10px 40px;
+        color: white;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 600;
+        background: black;
+    }
+
+    .atlas-4-sizing-wrapper {
+        background-color: #a5a5a6;
+        background-position: 42% center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        position: relative;
+        min-height: 100vh;
+        padding: 20px;
+    }
+
+    .atlas-4-sizing-wrapper:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: rgba(#e9e8e4, 0.85);
+    }
+
+    .atlas-4-sizing-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: black;
+        z-index: 2;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .atlas-4-sizing-inner h5 {
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+
+    .atlas-4-sizing-inner h2 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .atlas-4-sizing-inner h2#recommendedSize {
+        font-size: 12px;
+        font-weight: 500;
+        text-align: center;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .atlas-4-sizing-inner h2#recommendedSize .helmet-size {
+        font-size: 20px;
+        font-weight: 700;
+        margin-left: 10px;
+        white-space: nowrap;
+    }
+
+    .atlas-4-sizing-inner h2#recommendedSize .message.warning {
+        font-size: 10px;
+        background: #faefc8;
+        font-weight: 500;
+        color: black;
+        text-transform: none;
+        text-align: left;
+        margin-top: -15px;
+    }
+
+    .atlas-4-sizing-wizard-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .atlas-4-sizing-label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 3px;
+    }
+
+    .atlas-4-sizing-label label {
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .atlas-4-sizing-label .sizing-buttons-wrapper {
+        height: 25px;
+    }
+
+    .atlas-4-sizing-label .sizing-buttons-wrapper button {
+        border: 0;
+        padding: 0;
+        background: transparent;
+        font-size: 14px;
+        font-weight: 500;
+        opacity: 0.4;
+    }
+
+    .atlas-4-sizing-label .sizing-buttons-wrapper button.active {
+        opacity: 1;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .atlas-4-sizing-inner input {
+        background: rgba(white, 0.85);
+        border: 1px solid #8d8d8d;
+        border-radius: 2px;
+        padding: 10px;
+        font-size: 16px;
+        height: 40px;
+        line-height: 1;
+    }
+
+    .atlas-4-sizing-inner input::placeholder {
+        font-size: 12px;
+    }
+
     @media (max-width: 768px) {
         .helmet-features-wrapper {
             flex-direction: column;
@@ -1226,6 +1379,27 @@
             font-size: 14px;
             padding: 8px 15px;
         }
+
+        .atlas-4-sizing-inner h2#recommendedSize {
+            font-size: 16px;
+            margin-top: 30px;
+        }
+
+        .atlas-4-sizing-inner h2 {
+            font-size: 22px;
+        }
+
+        .atlas-4-sizing-inner h5 {
+            font-size: 16px;
+        }
+
+        .atlas-4-sizing-inner h2#recommendedSize .helmet-size {
+            font-size: 28px;
+        }
+
+        .atlas-4-sizing-inner h2#recommendedSize .message.warning {
+            font-size: 12px;
+        }
     }
 
     @media (min-width: 1200px) {
@@ -1261,6 +1435,31 @@
         .gallery-thumbnail {
             width: 100px;
             height: 100px;
+        }
+
+        .atlas-4-sizing-inner h2#recommendedSize {
+            justify-content: flex-start;
+        }
+
+        .atlas-4-sizing-inner h2 {
+            font-size: 38px;
+            margin-bottom: 30px;
+        }
+
+        .atlas-4-sizing-inner h5 {
+            font-size: 20px;
+        }
+
+        .atlas-4-sizing-label label {
+            font-size: 16px;
+        }
+
+        .atlas-4-sizing-label .sizing-buttons-wrapper button {
+            font-size: 16px;
+        }
+
+        .atlas-4-sizing-label .sizing-buttons-wrapper button.active {
+            font-size: 18px;
         }
     }
 
@@ -1353,9 +1552,32 @@
         </div>
         <span>ATLAS 4.0 has an all-new fit, with enhanced comfort and support because of the major introduction of the ece 22.06 standard. Double check the <a href="#sizing-guide">size guide</a> as you will need to change from your previous ATLAS size.</span>
     </section>
-    <section id="sizing-guide">
-        Sizing Guide here
-    </section>
+    <div class="atlas-4-sizing-wrapper full-height full-width-content" id="sizing-guide">
+        <div class="atlas-4-sizing-inner">
+            <h5>Sizing Guide</h5>
+            <h2>What size Atlas 4.0 do I need?</h2>
+            <div class="atlas-4-sizing-wizard-wrapper">
+                <div class="atlas-4-sizing-label">
+                    <label>Head size:</label>
+                    <div class="sizing-buttons-wrapper">
+                        <button id="cm-btn" class="active">CM</button>
+                        <button id="in-btn">IN</button>
+                    </div>
+                </div>
+                <input id="sizingGuideInput" type="number" class="size-guide" step=".1" placeholder="Enter your head size (CM)...">
+                <a id="measureBtn" class="atlas-4-btn-standard atlas-4-btn-alternative"><span>How to measure correctly?</span></a>
+                <h2 id="recommendedSize"></h2>
+            </div>
+        </div>
+    </div>
+    <div id="measureSection" class="atlas-4-content-wrapper video">
+        <h2>How to Measure</h2>
+        <ol>
+            <li>With a cloth measuring tape, wrap it around your head just above your eyebrows and ears.</li>
+            <li>Pull the tape comfortably tight. Take the measurement.</li>
+            <li>Repeat once more and go with the largest reading.</li>
+        </ol>
+    </div>
     <section id="safety">
         <div class="safety-content-wrapper">
             <h1>The new standard for safety</h1>
@@ -2410,6 +2632,169 @@
             element.toggleClass('active', !isActive);
             window.scrollTo(0, element.context.offsetTop - (headerHeight + 20))
         });
+
+        // size guide helper script
+        var input = document.querySelector('#sizingGuideInput');
+        var inBtn = document.querySelector("#in-btn");
+        var cmBtn = document.querySelector("#cm-btn");
+        var inches = false;
+
+        // clear input function to avoid repetition
+        function handleInput(value, placeholder) {
+            inches = value;
+            input.placeholder = placeholder;
+            input.value = '';
+            input.focus();
+            changeRecommendation('');
+        }
+
+        // set inches to true, add/remove active class and clear input field/recommendation
+        inBtn.addEventListener('click', function() {
+            handleInput(true, 'Enter your head size (IN)...');
+            inBtn.classList.add('active');
+            cmBtn.classList.remove('active');
+        })
+
+        // set inches to false, add/remove active class and clear input field/recommendation
+        cmBtn.addEventListener('click', function() {
+            handleInput(false, 'Enter your head size (CM)...');
+            cmBtn.classList.add('active');
+            inBtn.classList.remove('active');
+        })
+
+        // all atlas 4 sizes
+        var sizesArray = [
+            {
+                size: 'XXS',
+                cm: {
+                    min: 52.5,
+                    max: 53.9
+                },
+                in: {
+                    min: 20.67,
+                    max: 21.24
+                }
+            },
+            {
+                size: 'XS',
+                cm: {
+                    min: 54,
+                    max: 55.4
+                },
+                in: {
+                    min: 21.24,
+                    max: 21.83
+                }
+            },
+            {
+                size: 'SM',
+                cm: {
+                    min: 55.5,
+                    max: 57.4
+                },
+                in: {
+                    min: 21.83,
+                    max: 22.65
+                }
+            },
+            {
+                size: 'ML',
+                cm: {
+                    min: 57.5,
+                    max: 60.4
+                },
+                in: {
+                    min: 22.66,
+                    max: 23.80
+                }
+            },
+            {
+                size: 'L/XL',
+                cm: {
+                    min: 60.5,
+                    max: 61.9
+                },
+                in: {
+                    min: 23.80,
+                    max: 24.39
+                }
+            },
+            {
+                size: 'XL/XXL',
+                cm: {
+                    min: 62,
+                    max: 63.5
+                },
+                in: {
+                    min: 24.39,
+                    max: 25
+                }
+            }
+        ]
+
+        // Go through each size and find the correct size for given input
+        function selectSize(e) {
+            var formInput = parseFloat(e.currentTarget.value);
+            var currentInput = 0;
+
+            // set different rounding for CM/IN
+            if(inches){
+                currentInput = Math.floor(formInput * 100) / 100;
+            } else {
+                currentInput = Math.floor(formInput * 10) / 10;
+            }
+
+            // Create an array to store measurements
+            var measurementsArray = [];
+
+            if(currentInput > 10){
+                sizesArray.forEach(function(size){
+
+                    // select the correct array of measurements depending on type (inches or cm)
+                    var currentMeasurement = inches ? size.in : size.cm;
+
+                    // Add each of these measurement objects into an array so its easier to find lowest and highest measurement
+                    measurementsArray.push(currentMeasurement);
+
+                    // Select the correct size for both inches and centimeters depending on user input
+                    if(currentInput < measurementsArray[0].min || currentInput < 10){
+                        changeRecommendation('<span class="message warning"><span>Your head size is outside the range of our smallest size. Please contact customer support for advice.</span></span>')
+                    } else if (currentInput > measurementsArray[measurementsArray.length - 1].max){
+                        changeRecommendation('<span class="message warning"><span>Your head size is outside the range of our biggest size. Please contact customer support for advice.</span></span>')
+                    } else if (currentInput >= currentMeasurement.min && currentInput <= currentMeasurement.max){
+                        changeRecommendation('We recommend: <span class="helmet-size">' + size.size + '</span>')
+                    }
+                })
+            } else {
+                changeRecommendation('')
+            }
+        }
+
+        // change the visible H2 recommendation
+        function changeRecommendation(recommendation) {
+            var recommendationText = document.querySelector('#recommendedSize');
+            recommendationText.innerHTML = recommendation;
+        }
+
+        // center the screen after user focuses out of the input field
+        function centerScreen () {
+            var sizingBanner = document.querySelector('.atlas-4-sizing-wrapper');
+            window.scrollTo(0, sizingBanner.offsetTop - headerHeight)
+        }
+
+        // Run the selectSize function everytime there a change in the input field
+        input.addEventListener('input', selectSize)
+
+
+        // only run thsi function on mobile devices
+        if(window.matchMedia('(max-width: 767px)').matches){
+            input.addEventListener('focusout', centerScreen);
+        }
+
+        // scroll to the correct how to measure section
+        document.querySelector('#measureBtn').addEventListener('click', function () {
+            window.scrollTo(0, document.querySelector('#measureSection').offsetTop - (headerHeight + 100))
+        })
     });
 </script>
 </html>
