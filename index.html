@@ -1,0 +1,2417 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>Ruroc | ATLAS 4.0</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex,follow">
+    <meta name="viewport" content="width=device-width, minimum-scale=0.25, maximum-scale=1.6, initial-scale=1.0">
+    <meta content="Ruroc | ATLAS 4.0">
+    <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=Q8Dbwx"></script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-P7RNT8B');</script>
+    <!-- End Google Tag Manager -->
+    <link href="https://cdn.jsdelivr.net/npm/font-proxima-nova@1.0.1/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/uez5ftq.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-9ZfPnbegQSumzaE7mks2IYgHoayLtuto3AS6ieArECeaR8nCfliJVuLh/GaQ1gyM" crossorigin="anonymous">
+</head>
+
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    *:not(i) {
+        font-family: 'Termina', 'Proxima Nova', sans-serif;
+    }
+
+    .content.redirecting {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 100vh;
+        text-align: center;
+        height: 100vh;
+        width: 100vw;
+        background-color: black;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #b1ee0a;
+    }
+
+    #hero-wrapper {
+        position: relative;
+        height: 95vh;
+        background-image: url('https://i.imgur.com/WXM4PRx.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+
+    #hero-wrapper:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 50%;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    }
+
+    .header {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(20px);
+    }
+
+    .header:before,
+    .header:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 35%;
+        transform: translateY(-50%);
+        height: 3px;
+        background-color: white;
+    }
+
+    .header:before {
+        left: 0;
+    }
+
+    .header:after {
+        right: 0;
+    }
+
+    .header img {
+        max-width: 45px;
+    }
+
+    .hero-content-wrapper {
+        z-index: 2;
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 768px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-content-wrapper img {
+        max-width: 150px;
+        margin-bottom: 10px;
+    }
+
+    .hero-content-wrapper h1 {
+        text-transform: uppercase;
+        color: white;
+        font-size: 28px;
+        line-height: 1.1;
+        text-align: center;
+        margin: 0 0 15px 0;
+    }
+
+    .hero-content-wrapper h6 {
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 0 0 15px 0;
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    .hero-content-wrapper .countdown {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-content-wrapper .counter {
+        margin: 0 20px;
+    }
+
+    .hero-content-wrapper .time {
+        color: white;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 1;
+    }
+
+    .hero-content-wrapper .time-unit {
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 400;
+        font-size: 12px;
+        color: white;
+    }
+
+    #callout {
+        position: relative;
+        background-color: #B1EE0A;
+        padding: 40px 20px;
+        box-sizing: border-box;
+    }
+
+    #callout .indicator {
+        z-index: 2;
+        background-color: #b1ee0a;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, -100%);
+        height: 30px;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+    }
+
+    #callout span {
+        display: block;
+        max-width: 992px;
+        font-size: 16px;
+        margin: 0 auto;
+    }
+
+    #callout span a {
+        color: black;
+        font-weight: 600;
+    }
+
+    #safety {
+        position: relative;
+        height: 95vh;
+        background-image: url('https://i.imgur.com/uYES6pU.jpg');
+        background-position: 20%;
+    }
+
+    #safety:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    #safety .safety-content-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: calc(100% - 40px);
+        z-index: 2;
+        max-width: 768px;
+    }
+
+    #safety .safety-content-wrapper h1 {
+        text-transform: uppercase;
+        font-size: 36px;
+        text-align: center;
+        line-height: 1.2;
+        margin: 0 0 10px 0;
+    }
+
+    #safety .safety-content-wrapper h6 {
+        text-align: center;
+        margin: 0 0 20px 0;
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    #safety .safety-content-wrapper p {
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .helmet-feature-title {
+        text-transform: uppercase;
+        text-align: center;
+        margin: 40px 0 10px 0;
+        font-size: 36px;
+    }
+
+    .helmet-features-wrapper {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        max-width: 1200px;
+        margin: 20px auto 40px auto;
+    }
+
+    .helmet-feature-individual {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .helmet-feature-individual-inner {
+        padding-top: 170%;
+        width: 100%;
+        position: relative;
+    }
+
+    .helmet-feature-content {
+        position: absolute;
+        left: 20px;
+        right: 20px;
+    }
+
+    .helmet-feature-content h3 {
+        margin: 0 0 10px 0;
+        text-transform: uppercase;
+        font-size: 24px;
+        line-height: 1.2;
+    }
+
+    .helmet-feature-content * {
+        text-align: center;
+    }
+
+    .helmet-feature-content p {
+        font-size: 12px;
+    }
+
+    #comfort .helmet-feature-individual-inner {
+        background-image: url("https://i.imgur.com/uMvNl6s.jpg");
+        background-size: auto 120%;
+        background-position: 45% 40%;
+    }
+
+    #comfort .helmet-feature-individual-inner .helmet-feature-content {
+        top: 40px;
+    }
+
+    #acoustics {
+        position: relative;
+    }
+
+    #acoustics .helmet-feature-individual-inner {
+        background-image: url("https://i.imgur.com/7YjQpQv.jpg");
+        background-size: auto 140%;
+        background-position: 50% 30%;
+    }
+
+    #acoustics .helmet-feature-individual-inner .helmet-feature-content {
+        top: 40px;
+    }
+
+    #acoustics .helmet-feature-individual-inner .helmet-feature-content * {
+        color: white;
+    }
+
+    #acoustics .caveat {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        color: white;
+        font-size: 10px;
+    }
+
+    #ventilation .helmet-feature-individual-inner {
+        background-image: url("https://i.imgur.com/FM1KyRw.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    #ventilation .helmet-feature-individual-inner .helmet-feature-content {
+        top: 40px;
+    }
+
+    #ventilation .helmet-feature-individual-inner .helmet-feature-content * {
+        color: white;
+    }
+
+    #fieldOfView .helmet-feature-individual-inner {
+        background-image: url("https://i.imgur.com/tWnYBgj.jpg");
+        background-size: auto 150%;
+        background-position: 48% 0%;
+    }
+
+    #fieldOfView .helmet-feature-individual-inner .helmet-feature-content {
+        top: 40px;
+    }
+
+    #rheon .helmet-feature-individual-inner {
+        background-image: url("https://i.imgur.com/qzm1Cw8.jpg");
+        background-size: auto 140%;
+        background-position: 50% 0;
+    }
+
+    #rheon .helmet-feature-individual-inner .helmet-feature-content {
+        top: 40px;
+    }
+
+    #shockwave .helmet-feature-individual-inner {
+        background-image: url("https://i.imgur.com/2iVKLd2.jpg");
+        background-size: auto 170%;
+        background-position: 52% 140%;
+    }
+
+    #shockwave .helmet-feature-individual-inner .helmet-feature-content {
+        bottom: 20px;
+    }
+
+    #shockwave .helmet-feature-individual-inner .helmet-feature-content * {
+        text-align: left !important;
+    }
+
+    .artwork-wrapper {
+        background-color: black;
+        padding: 40px 0;
+    }
+
+    .atlas-4-product-range-title-wrapper {
+        background-image: url("https://i.imgur.com/xp4Y9YV.png");
+        background-size: auto 80%;
+        background-position: center;
+        background-repeat: repeat;
+        padding: 20px;
+        position: relative;
+        margin: 40px 0;
+    }
+
+    .atlas-4-product-range-title-wrapper:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0));
+    }
+
+    .atlas-4-product-range-title-image {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .product-range-title {
+        font-size: 44px;
+        line-height: 1;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: white;
+        margin: 0 0 10px 0;
+    }
+
+    .atlas-4-product-range-title-wrapper .product-range-title {
+        text-align: center;
+    }
+
+    .atlas-4-product-range-title-image img {
+        max-height: 80px;
+        max-width: 280px;
+        margin: 0 auto 20px auto;
+    }
+
+    .atlas-4-product-range-title-image span {
+        display: block;
+        text-align: center;
+        font-size: 14px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: white;
+    }
+
+    .gallery-triggers {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    }
+
+    .gallery-trigger {
+        width: 80px;
+        height: 80px;
+        min-width: 80px;
+        margin: 0 5px;
+        border: 2px solid black;
+        transition: .2s;
+    }
+
+    .gallery-trigger:hover {
+        border: 2px solid white;
+    }
+
+    .gallery-trigger.active {
+        border: 2px solid #b1ee0a;
+    }
+
+    .gallery-trigger img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .gallery-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    .atlas-4-artwork-image-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .atlas-4-artwork-image-inner img {
+        width: 100%;
+    }
+
+    .gallery-thumbnails {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .gallery-thumbnail {
+        width: 60px;
+        height: 60px;
+        border: 2px solid black;
+        transition: .2s;
+        margin: 0 5px;
+    }
+
+    .gallery-thumbnail:hover {
+        border: 2px solid white;
+    }
+
+    .gallery-thumbnail.active {
+        border: 2px solid #b1ee0a;
+    }
+
+    .atlas-4-artwork-content-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0 20px;
+        margin-top: 40px;
+        box-sizing: border-box;
+    }
+
+    .artwork-logo-wrapper {
+        height: 50px;
+        margin-bottom: 20px;
+    }
+
+    .artwork-logo-wrapper img {
+        height: 100%;
+    }
+
+    .artwork-logo-wrapper h1 {
+        font-weight: 700;
+        margin-bottom: 0;
+    }
+
+    .atlas-4-artwork-content-wrapper p {
+        color: #ddd;
+        margin-bottom: 20px;
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    .atlas-4-product-list-wrapper {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        margin: 80px 0 80px 20px;
+        width: calc(100% - 20px);
+    }
+
+    .atlas-4-product-list-wrapper::-webkit-scrollbar,
+    .atlas-4-product-list-wrapper::-webkit-scrollbar-track-piece,
+    .atlas-4-product-list-wrapper::-webkit-scrollbar-thumb {
+        height: 10px;
+        background: #121212;
+        border-radius: 100px;
+    }
+
+    .atlas-4-product-list-wrapper::-webkit-scrollbar-thumb {
+        background: #b1ee0a;
+    }
+
+    .atlas-4-product-inner-wrapper {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .atlas-4-product-individual {
+        min-width: 75%;
+        width: 75%;
+        margin-bottom: 40px;
+        margin-right: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .atlas-4-product-list-image-wrapper {
+        width: 100%;
+        padding-top: 100%;
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+    .atlas-4-product-list-image-wrapper img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .atlas-4-product-individual .atlas-4-product-name {
+        text-transform: uppercase;
+        font-weight: 600;
+        margin: 0;
+        text-align: center;
+        color: white;
+    }
+
+    .chain-banner-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .chain-banner-wrapper.first {
+        flex-direction: column;
+        position: relative;
+    }
+
+    .chain-banner-wrapper.first:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, .4), rgba(0, 0, 0, 1));
+        z-index: 2;
+    }
+
+    .chain-banner-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .chain-banner-video video {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .app-icon {
+        max-width: 75px;
+        margin-bottom: 10px;
+    }
+
+    .chain-banner-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 3;
+    }
+
+    .chain-lead-banner-content {
+        width: 100%;
+        position: relative;
+        z-index: 2;
+    }
+
+    .chain-lead-banner-content * {
+        color: white;
+    }
+
+    .chain-lead-banner-image {
+        width: 100%;
+        position: relative;
+        z-index: 2;
+    }
+
+    .chain-lead-banner-image img {
+        width: 100%;
+    }
+
+    .download-wrapper {
+        margin-bottom: 20px;
+        display: flex;
+    }
+
+    .download-button {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .download-button img {
+        max-width: 120px;
+    }
+
+    .chain-banner-title {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 1;
+        margin: 0 0 20px 0;
+        text-transform: uppercase;
+    }
+
+    .chain-sub-banner-title {
+        font-size: 12px;
+        font-weight: 400;
+        margin: 0 0 20px 0;
+    }
+
+    .chain-banner-wrapper .usp-wrapper {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .chain-banner-wrapper .usp-individual {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-right: 10px;
+    }
+
+    .usp-individual i {
+        font-size: 14px;
+        margin-right: 10px;
+    }
+
+    .usp-individual  .usp-text {
+        font-size: 10px;
+    }
+
+    .chain-reveal-date {
+        text-transform: uppercase;
+        margin: 10px 0;
+        font-weight: 600;
+        font-size: 1rem;
+        text-align: left;
+        width: 100%;
+    }
+
+    .faq-wrapper {
+        margin: 40px auto 0 auto;
+        max-width: 1440px;
+    }
+
+    .faq-inner-wrapper h2 {
+        margin-bottom: 20px;
+        text-align: center;
+        color: black;
+    }
+
+    .faq-individual .faq-question {
+        cursor: pointer;
+        padding: 20px;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid #eee;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    .faq-individual .faq-question.active {
+        border-bottom: none !important;
+        background-color: #fafafa;
+        padding: 20px;
+    }
+
+    .faq-individual .faq-question.active + .faq-answer {
+        display: block !important;
+    }
+
+    .faq-individual .faq-question.active .question-inner {
+        font-weight: 600;
+    }
+
+    .faq-individual .faq-question.active:hover,
+    .faq-individual .faq-question.active:focus {
+        background-color: #fafafa;
+    }
+
+    .faq-individual .faq-question:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    .faq-individual .faq-question:last-child {
+        border-bottom: none;
+    }
+
+    .faq-individual .faq-question .question-inner {
+        flex-grow: 1;
+    }
+
+    .faq-individual .faq-question span {
+        display: inline-block;
+        margin-left: 10px;
+    }
+
+    .faq-answer {
+        background-color: #fafafa;
+        padding: 0 20px 20px 20px;
+        box-sizing: border-box;
+    }
+
+    .faq-answer p {
+        margin-bottom: 0;
+    }
+
+    .faq-answer img {
+        width: 100%;
+        max-height: 436px;
+        object-fit: contain;
+        object-position: left;
+        margin-top: 20px;
+    }
+
+    .faq-answer span {
+        display: block;
+        margin: 20px 0 10px 0;
+        text-transform: uppercase;
+    }
+
+    .faq-answer a {
+        display: inline-block;
+        margin-top: 10px;
+        background-color: black;
+        color: white;
+        padding: 5px 20px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .faq-answer a:hover {
+        color: black !important;
+    }
+
+    .final-support-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 40px auto 0 auto;
+        padding-bottom: 40px;
+        max-width: 992px;
+    }
+
+    .final-support-message {
+        text-align: center;
+        font-weight: 600;
+        font-size: 1.6rem;
+        color: black;
+    }
+
+    .atlas-4-btn-standard {
+        display: inline-block;
+        position: relative;
+        margin: 10px 0 20px 0;
+        z-index: 2;
+        text-decoration: none;
+    }
+
+    .atlas-4-btn-standard:before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        background-color: white;
+        z-index: -1;
+    }
+
+    .atlas-4-btn-standard:after {
+        content: '';
+        position: absolute;
+        top: -3px;
+        left: -3px;
+        width: calc(100% + 6px);
+        height: calc(100% + 6px);
+        background-image: linear-gradient(130deg, #b1ee0a 20%, white 20%, white 80%, #b1ee0a 80%);
+        z-index: -2;
+        transition: .2s;
+    }
+
+    .atlas-4-btn-standard:not(.disabled) span:hover {
+        background-color: white;
+        color: black;
+    }
+
+    .atlas-4-btn-standard:not(.disabled):hover::after {
+        background-image: linear-gradient(130deg, #ddd 20%, white 20%, white 80%, #ddd 80%);
+    }
+
+    .atlas-4-btn-standard span {
+        display: block;
+        border: none;
+        padding: 5px 15px;
+        box-sizing: border-box;
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 12px;
+        color: black;
+        position: relative;
+        z-index: 3;
+        background-color: #b1ee0a;
+        transition: .2s;
+        min-width: 200px;
+        text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+        .helmet-features-wrapper {
+            flex-direction: column;
+        }
+
+        .gallery-wrapper.reverse {
+            flex-direction: column-reverse;
+        }
+
+        .atlas-4-product-individual.jormungandr .atlas-4-product-name {
+            font-size: 2.4rem;
+        }
+
+        .chain-lead-banner-content {
+            margin-bottom: 20px;
+        }
+
+        .faq-individual .faq-question {
+            font-size: 14px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        #hero-wrapper {
+            background-image: url('https://i.imgur.com/Q7OfYN6.jpg');
+            background-position: 50% 40%;
+        }
+
+        .header:before,
+        .header:after {
+            width: 45%;
+        }
+
+        .header img {
+            max-width: 60px;
+        }
+
+        .hero-content-wrapper {
+            bottom: 80px;
+        }
+
+        .hero-content-wrapper img {
+            max-width: 250px;
+        }
+
+        .hero-content-wrapper h1 {
+            font-size: 48px;
+        }
+
+        .hero-content-wrapper h6 {
+            font-size: 20px;
+        }
+
+        .hero-content-wrapper .counter {
+            margin: 0 30px;
+        }
+
+        .hero-content-wrapper .time {
+            font-size: 40px;
+        }
+
+        #callout {
+            padding: 80px 40px;
+        }
+
+        #callout .indicator {
+            height: 50px;
+            width: 60px;
+            font-size: 1.5rem;
+        }
+
+        #callout span {
+            font-size: 20px;
+        }
+
+        #safety {
+            background-position: 30%;
+        }
+
+        #safety .safety-content-wrapper {
+            right: 40px;
+            left: inherit;
+            transform: translate(0, -50%);
+            max-width: 768px;
+        }
+
+        #safety .safety-content-wrapper h1 {
+            font-size: 48px;
+            text-align: left;
+        }
+
+        #safety .safety-content-wrapper h6 {
+            font-size: 24px;
+            text-align: left;
+        }
+
+        #safety .safety-content-wrapper p {
+            font-size: 14px;
+            text-align: left;
+        }
+
+        .helmet-feature-title {
+            font-size: 48px;
+        }
+
+        .helmet-features-wrapper {
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 20px auto 80px auto;
+        }
+
+        .helmet-feature-individual {
+            min-width: calc(50% - 10px);
+            width: calc(50% - 10px);
+        }
+
+        .helmet-feature-individual-inner {
+            padding-top: 125%;
+        }
+
+        .helmet-feature-content {
+            position: absolute;
+            left: 40px;
+            right: 40px;
+        }
+
+        .helmet-feature-content h3 {
+            font-size: 32px;
+        }
+
+        #comfort .helmet-feature-individual-inner {
+            background-position: 45% 60%;
+        }
+
+        #comfort .helmet-feature-individual-inner .helmet-feature-content {
+            top: 40px;
+        }
+
+        #acoustics .helmet-feature-individual-inner .helmet-feature-content {
+            top: 40px;
+        }
+
+        #ventilation .helmet-feature-individual-inner .helmet-feature-content {
+            top: 40px;
+        }
+
+        #fieldOfView .helmet-feature-individual-inner {
+            background-position: 48% 20%;
+        }
+
+        #fieldOfView .helmet-feature-individual-inner .helmet-feature-content {
+            top: 40px;
+        }
+
+        #rheon .helmet-feature-individual-inner {
+            background-position: 50% 10%;
+        }
+
+        #rheon .helmet-feature-individual-inner .helmet-feature-content {
+            top: 40px;
+        }
+
+        #shockwave .helmet-feature-individual-inner {
+            background-size: auto 150%;
+            background-position: 56% 135%;
+        }
+
+        #shockwave .helmet-feature-individual-inner .helmet-feature-content {
+            bottom: 40px;
+        }
+
+        .atlas-4-product-range-title-wrapper {
+            padding: 40px;
+            background-size: 50%;
+            margin: 80px 0;
+        }
+
+        .atlas-4-product-range-title-wrapper img {
+            max-height: 100px;
+            max-width: 480px;
+        }
+
+        .product-range-title {
+            font-size: 52px;
+        }
+
+        .atlas-4-product-range-title-image span {
+            font-size: 16px;
+            letter-spacing: 8px;
+        }
+
+        .gallery-trigger {
+            width: 100px;
+            height: 100px;
+        }
+
+        .gallery-thumbnail {
+            width: 80px;
+            height: 80px;
+        }
+
+        .atlas-4-artwork-image-wrapper {
+            width: calc(50% - 10px);
+        }
+
+        .gallery-wrapper {
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        .atlas-4-artwork-content-wrapper {
+            width: calc(50% - 10px);
+        }
+
+        .artwork-logo-wrapper {
+            height: 80px;
+            margin-bottom: 30px;
+            max-width: 768px;
+        }
+
+        .jormungandr .artwork-logo-wrapper {
+            height: 150px;
+        }
+
+        .atlas-4-artwork-content-wrapper p {
+            margin-bottom: 30px;
+        }
+
+        .atlas-4-product-list-wrapper {
+            margin: 80px 0 80px 40px;
+            width: calc(100% - 40px);
+        }
+
+        .atlas-4-product-individual {
+            min-width: 45%;
+            width: 45%;
+        }
+
+        .chain-banner-wrapper {
+            padding: 40px;
+        }
+
+        .chain-banner-content-wrapper {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chain-lead-banner-content {
+            width: calc(60% - 10px);
+        }
+
+        .chain-lead-banner-image {
+            width: calc(40% - 10px);
+        }
+
+        .download-button img {
+            max-width: 150px;
+        }
+
+        .chain-banner-title {
+            font-size: 44px;
+        }
+
+        .chain-sub-banner-title {
+            font-size: 16px;
+            margin: 0 0 30px 0;
+        }
+
+        .chain-banner-wrapper .usp-individual {
+            margin-right: 30px;
+        }
+
+        .usp-individual i {
+            font-size: 24px;
+        }
+
+        .usp-individual .usp-text {
+            font-size: 16px;
+        }
+
+        .chain-reveal-date {
+            font-size: 1.2rem;
+        }
+
+        .faq-wrapper {
+            margin: 80px auto 0 auto;
+        }
+
+        .faq-individual .faq-question {
+            padding: 30px;
+            font-size: 16px;
+        }
+
+        .faq-individual .faq-question.active {
+            padding: 30px;
+        }
+
+        .faq-answer {
+            padding: 0 40px 40px 40px;
+        }
+
+        .faq-answer a {
+            padding: 8px 25px;
+        }
+
+        .final-support-wrapper {
+            margin: 80px auto 0 auto;
+            padding-bottom: 80px;
+        }
+
+        .final-support-message {
+            font-size: 1.2rem;
+        }
+
+        .atlas-4-btn-standard span {
+            font-size: 14px;
+            padding: 8px 15px;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .hero-content-wrapper h1 {
+            font-size: 52px;
+        }
+
+        .hero-content-wrapper .time {
+            font-size: 44px;
+        }
+
+        #safety {
+            background-position: 60%;
+        }
+
+        #safety:after {
+            content: none;
+        }
+
+        #safety .safety-content-wrapper h1 {
+            font-size: 60px;
+        }
+
+        #safety .safety-content-wrapper h6 {
+            font-size: 28px;
+        }
+
+        .gallery-trigger {
+            width: 120px;
+            height: 120px;
+        }
+
+        .gallery-thumbnail {
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    @media (min-width: 1440px) {
+        #safety .safety-content-wrapper {
+            max-width: 992px;
+        }
+
+        .product-range-title {
+            font-size: 72px;
+        }
+
+        .atlas-4-product-range-title-wrapper img {
+            max-height: 120px;
+        }
+
+        .gallery-trigger {
+            width: 180px;
+            height: 180px;
+        }
+
+        .gallery-thumbnail {
+            width: 120px;
+            height: 120px;
+        }
+
+        .atlas-4-artwork-image-wrapper {
+            width: calc(40% - 10px);
+        }
+
+        .atlas-4-artwork-content-wrapper {
+            width: calc(60% - 10px);
+            padding-right: 40px;
+        }
+
+        .artwork-logo-wrapper {
+            height: 100px;
+        }
+
+        .atlas-4-artwork-content-wrapper p {
+            font-size: 14px;
+        }
+
+        .atlas-4-product-individual {
+            min-width: 28%;
+            width: 28%;
+        }
+
+        .chain-banner-title {
+            font-size: 64px;
+        }
+    }
+</style>
+
+<body>
+<div class="content">
+    <span class="finished-callback"></span>
+
+    <section id="hero-wrapper">
+        <div class="header">
+            <img src="https://i.imgur.com/Gjk9S8b.png" alt="">
+        </div>
+        <div class="hero-content-wrapper">
+            <img src="https://i.imgur.com/NAJZjBP.png" alt="">
+            <h1>We are preparing for launch</h1>
+            <h6>ATLAS 4.0 will be live in:</h6>
+            <div class="countdown">
+                <div class="counter">
+                    <div class="time days" data-format="%D">&nbsp;</div>
+                    <div class="time-unit">DAYS</div>
+                </div>
+                <div class="counter">
+                    <div class="time hours" data-format="%H">&nbsp;</div>
+                    <div class="time-unit">HRS</div>
+                </div>
+                <div class="counter">
+                    <div class="time minutes" data-format="%M">&nbsp;</div>
+                    <div class="time-unit">MINS</div>
+                </div>
+                <div class="counter">
+                    <div class="time seconds" data-format="%S">&nbsp;</div>
+                    <div class="time-unit">SECS</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="callout">
+        <div class="indicator">
+            <i class="fas fa-chevron-double-down"></i>
+        </div>
+        <span>ATLAS 4.0 has an all-new fit, with enhanced comfort and support because of the major introduction of the ece 22.06 standard. Double check the <a href="#sizing-guide">size guide</a> as you will need to change from your previous atlas size.</span>
+    </section>
+    <section id="sizing-guide">
+        Sizing Guide here
+    </section>
+    <section id="safety">
+        <div class="safety-content-wrapper">
+            <h1>The new standard for safety</h1>
+            <h6>ECE 22.06 Certified</h6>
+            <p>ATLAS 4.0 is one of the first motorcycle helmets on the road to meet ECE 22.06. Not only that, we exceed all testing standards by a minimum of 20%, to give you the ultimate protection.</p>
+        </div>
+    </section>
+    <h2 class="helmet-feature-title">Helmet Features</h2>
+    <div class="helmet-features-wrapper" id="helmetFeatures">
+        <div class="helmet-feature-individual" id="comfort">
+            <div class="helmet-feature-individual-inner">
+                <div class="helmet-feature-content">
+                    <h3>Ultimate Comfort</h3>
+                    <p>The fully re-engineered internals, including head-liner and cheek pads, take fit, comfort, acoustic control and support to a whole new level.</p>
+                </div>
+            </div>
+        </div>
+        <div class="helmet-feature-individual" id="acoustics">
+            <div class="helmet-feature-individual-inner">
+                <div class="helmet-feature-content">
+                    <h3>Quieter than ever</h3>
+                    <p>The ATLAS 4.0 internal lining is equipped with new sound-dampening inserts around the ear structure. This improves acoustic performance by <b>57%*</b>, making it the quietest ATLAS ever produced."|raw}}</p>
+                </div>
+            </div>
+            <span class="caveat">*From ATLAS 3.0 vs our leading competitor</span>
+        </div>
+        <div class="helmet-feature-individual" id="ventilation">
+            <div class="helmet-feature-individual-inner">
+                <div class="helmet-feature-content">
+                    <h3>Climate Control</h3>
+                    <p>Take full control of your helmet environment with open/close vents throughout - including the addition of a new top vent switch.</p>
+                </div>
+            </div>
+        </div>
+        <div class="helmet-feature-individual" id="fieldOfView">
+            <div class="helmet-feature-individual-inner">
+                <div class="helmet-feature-content">
+                    <h3>Maximum Vision</h3>
+                    <p>Featuring <b>215° horizontal</b> and <b>100° vertical</b> field of vision, the ATLAS 4.0 edge-to edge visor maximises peripheral vision. Anti-scratch dipped, Pinlock 70 compatible, and made from Optical Grade Ballistic Polycarbonate, this is vision reinforced." |raw}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="helmet-feature-individual" id="rheon">
+            <div class="helmet-feature-individual-inner">
+                <div class="helmet-feature-content">
+                    <h3>RHEON™ Protection</h3>
+                    <p>The world’s first road-ready motorcycle helmet to feature RHEON™ technology. Next-level protection seamlessly integrated into the ATLAS 4.0 head-liner.</p>
+                </div>
+            </div>
+        </div>
+        <div class="helmet-feature-individual" id="shockwave">
+            <div class="helmet-feature-individual-inner">
+                <div class="helmet-feature-content">
+                    <h3>Bluetooth Audio</h3>
+                    <p>Convert your ATLAS 4.0 into a full Bluetooth motorcycle helmet with our Shockwave audio system. Plug into your favourite tunes, take calls, and download our CHAIN App for Infinite range comms. It fits seemlessly into the back of your helmet, without compromising on the style, safety and aerodynamics of your setup. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="artwork-wrapper">
+        <div class="atlas-4-product-range-title-wrapper full-width-content">
+            <div class="atlas-4-product-range-title-image">
+                <img src="https://i.imgur.com/jwD5bWa.png" alt="" />
+                <span>Series</span>
+            </div>
+        </div>
+
+        <section id="ragnarok" class="gallery-trigger-parent">
+            <div class="gallery-triggers">
+                <div class="gallery-trigger active" data-target="fenrir-gal">
+                    <img src="https://i.imgur.com/Xl5VAw0.jpg" alt="">
+                </div>
+                <div class="gallery-trigger" data-target="jormungandr-gal">
+                    <img src="https://i.imgur.com/P0YynZR.jpg" alt="">
+                </div>
+                <div class="gallery-trigger" data-target="serpent-gal">
+                    <img src="https://i.imgur.com/5qFiDV6.jpg" alt="">
+                </div>
+                <div class="gallery-trigger" data-target="surtr-gal">
+                    <img src="https://i.imgur.com/hzCQ45A.jpg" alt="">
+                </div>
+            </div>
+            <div class="gallery-wrapper active" data-gallery="fenrir-gal">
+                <div class="atlas-4-artwork-image-wrapper">
+                    <div class="atlas-4-artwork-image-inner">
+                        <img class="gallery-image" src="https://i.imgur.com/Xl5VAw0.jpg" alt="">
+                    </div>
+                    <div class="gallery-thumbnails">
+                        <img class="active gallery-thumbnail"
+                             src="https://i.imgur.com/Xl5VAw0.jpg"
+                             data-image="https://i.imgur.com/Xl5VAw0.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/qnoGoGE.jpg"
+                             data-image="https://i.imgur.com/qnoGoGE.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/CbbrzwZ.jpg"
+                             data-image="https://i.imgur.com/CbbrzwZ.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/25Tdfm4.jpg"
+                             data-image="https://i.imgur.com/25Tdfm4.jpg"
+                             alt="">
+                    </div>
+                </div>
+                <div class="atlas-4-artwork-content-wrapper">
+                    <div class="artwork-logo-wrapper">
+                        <img src="https://i.imgur.com/VQTcHfz.png" alt="" />
+                    </div>
+                    <p>A monstrous wolf, with unparalleled strength and boundless evil - Fenrir's escape will trigger the end of days.<br>An intricate hand-crafted gold leaf design, featuring the Fenrir wolf and its snarling teeth, shrouded in ornate urnes style pattern-work...this beast is ready to roam-free.</p>
+                </div>
+            </div>
+            <div class="gallery-wrapper reverse jormungandr" data-gallery="jormungandr-gal">
+                <div class="atlas-4-artwork-content-wrapper">
+                    <div class="artwork-logo-wrapper">
+                        <img src="https://i.imgur.com/IEozZ4n.png" alt="" />
+                    </div>
+                    <p>Discarded into the great ocean, Jormungandr grew to become the colossal world serpent, once its grasp on the planet loosens, Ragnarok is inevitable.<br>
+                        This venomous design, packed with the leviathan's razor sharp teeth, wrapped in scaled armour etched with runic lettering. Release this helmet and watch the chaos unfold, it's time to ride!</p>
+                </div>
+                <div class="atlas-4-artwork-image-wrapper">
+                    <div class="atlas-4-artwork-image-inner">
+                        <img class="gallery-image" src="https://i.imgur.com/lsysjxw.jpg" alt="">
+                    </div>
+                    <div class="gallery-thumbnails">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/P0YynZR.jpg"
+                             data-image="https://i.imgur.com/P0YynZR.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/sYaiKRv.jpg"
+                             data-image="https://i.imgur.com/sYaiKRv.jpg"
+                             alt="">
+                        <img class="active gallery-thumbnail"
+                             src="https://i.imgur.com/lsysjxw.jpg"
+                             data-image="https://i.imgur.com/lsysjxw.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/HMlzAA7.jpg"
+                             data-image="https://i.imgur.com/HMlzAA7.jpg"
+                             alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-wrapper" data-gallery="serpent-gal">
+                <div class="atlas-4-artwork-image-wrapper">
+                    <div class="atlas-4-artwork-image-inner">
+                        <img class="gallery-image" src="https://i.imgur.com/97VCIOq.jpg alt="">
+                    </div>
+                    <div class="gallery-thumbnails">
+                        <img class="active gallery-thumbnail"
+                             src="https://i.imgur.com/97VCIOq.jpg"
+                             data-image="https://i.imgur.com/97VCIOq.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/H0HMU0N.jpg"
+                             data-image="https://i.imgur.com/H0HMU0N.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/3CO0m3p.jpg"
+                             data-image="https://i.imgur.com/3CO0m3p.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/mGeuy05.jpg"
+                             data-image="https://i.imgur.com/mGeuy05.jpg"
+                             alt="">
+                    </div>
+                </div>
+                <div class="atlas-4-artwork-content-wrapper">
+                    <div class="artwork-logo-wrapper">
+                        <img src="https://i.imgur.com/4SDMMvU.png" alt="" />
+                    </div>
+                    <p>Jormungandr's eternal bond is broken, and with thunderous unrest at sea and skies filled with poison, doomsday will descend.<br>
+                        The Serpent helmet features the venomous Jormungandr in all its demonic glory. Wrapping the design from front to back, this beastly design is sure to bring the world to its knees...let Ragnarok begin!</p>
+                </div>
+            </div>
+            <div class="gallery-wrapper reverse" data-gallery="surtr-gal">
+                <div class="atlas-4-artwork-content-wrapper">
+                    <div class="artwork-logo-wrapper">
+                        <img src="https://i.imgur.com/GuwO2UT.png" alt="" />
+                    </div>
+                    <p>Discarded into the great ocean, Jormungandr grew to become the colossal world serpent, once its grasp on the planet loosens, Ragnarok is inevitable.<br>
+                        This venomous design, packed with the leviathan's razor sharp teeth, wrapped in scaled armour etched with runic lettering. Release this helmet and watch the chaos unfold, it's time to ride!</p>
+                </div>
+                <div class="atlas-4-artwork-image-wrapper">
+                    <div class="atlas-4-artwork-image-inner">
+                        <img class="gallery-image" src="https://i.imgur.com/zay5tTQ.jpg" alt="">
+                    </div>
+                    <div class="gallery-thumbnails">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/lxDwoDm.jpg"
+                             data-image="https://i.imgur.com/lxDwoDm.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/gOmcMN7.jpg"
+                             data-image="https://i.imgur.com/gOmcMN7.jpg"
+                             alt="">
+                        <img class="active gallery-thumbnail"
+                             src="https://i.imgur.com/zay5tTQ.jpg"
+                             data-image="https://i.imgur.com/zay5tTQ.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/5ypIX7p.jpg"
+                             data-image="https://i.imgur.com/5ypIX7p.jpg"
+                             alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="atlas-4-product-range-title-wrapper full-width-content">
+            <div class="atlas-4-product-range-title-image">
+                <h1 class="product-range-title">Misfits</h1>
+                <span>Series</span>
+            </div>
+        </div>
+        <section id="misfits" class="gallery-trigger-parent">
+            <div class="gallery-triggers">
+                <div class="gallery-trigger active" data-target="streetking-gal">
+                    <img src="https://i.imgur.com/KzLgoy4.jpg" alt="">
+                </div>
+                <div class="gallery-trigger" data-target="outrun-gal">
+                    <img src="https://i.imgur.com/EaNjYH1.jpg" alt="">
+                </div>
+                <div class="gallery-trigger" data-target="joker-gal">
+                    <img src="https://i.imgur.com/HL4cP4X.jpg" alt="">
+                </div>
+                <div class="gallery-trigger" data-target="elcobre-gal">
+                    <img src="https://i.imgur.com/0XbB0w7.jpg" alt="">
+                </div>
+            </div>
+            <div class="gallery-wrapper active" data-gallery="streetking-gal">
+                <div class="atlas-4-artwork-image-wrapper">
+                    <div class="atlas-4-artwork-image-inner">
+                        <img class="gallery-image" src="https://i.imgur.com/KzLgoy4.jpg" alt="">
+                    </div>
+                    <div class="gallery-thumbnails">
+                        <img class="active gallery-thumbnail"
+                             src="https://i.imgur.com/KzLgoy4.jpg"
+                             data-image="https://i.imgur.com/KzLgoy4.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/HeMVVuS.jpg"
+                             data-image="https://i.imgur.com/HeMVVuS.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/5wju0be.jpg"
+                             data-image="https://i.imgur.com/5wju0be.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/T5jgf6b.jpg"
+                             data-image="https://i.imgur.com/T5jgf6b.jpg"
+                             alt="">
+                    </div>
+                </div>
+                <div class="atlas-4-artwork-content-wrapper">
+                    <div class="artwork-logo-wrapper">
+                        <img src="https://i.imgur.com/6tKIDlh.png" alt="" />
+                    </div>
+                    <p>The streets, they're what shape us, what make us, and what we ride on.
+                        Every kingdom needs a king, make the streets yours. A regal-renegade combination of sleek matte black with the hand-laid gold etched skull design and steel-grey accents, a helmet fit for a Street King!</p>
+                </div>
+            </div>
+            <div class="gallery-wrapper reverse" data-gallery="outrun-gal">
+                <div class="atlas-4-artwork-content-wrapper">
+                    <div class="artwork-logo-wrapper">
+                        <img src="https://i.imgur.com/utW5RQe.png" alt="" />
+                    </div>
+                    <p>Discarded into the great ocean, Jormungandr grew to become the colossal world serpent, once its grasp on the planet loosens, Ragnarok is inevitable.<br>
+                        This venomous design, packed with the leviathan's razor sharp teeth, wrapped in scaled armour etched with runic lettering. Release this helmet and watch the chaos unfold, it's time to ride!</p>
+                </div>
+                <div class="atlas-4-artwork-image-wrapper">
+                    <div class="atlas-4-artwork-image-inner">
+                        <img class="gallery-image" src="https://i.imgur.com/vhEbQmE.jpg" alt="">
+                    </div>
+                    <div class="gallery-thumbnails">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/EaNjYH1.jpg"
+                             data-image="https://i.imgur.com/EaNjYH1.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/qs88umk.jpg"
+                             data-image="https://i.imgur.com/qs88umk.jpg"
+                             alt="">
+                        <img class="active gallery-thumbnail"
+                             src="https://i.imgur.com/vhEbQmE.jpg"
+                             data-image="https://i.imgur.com/vhEbQmE.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/qUHDqPo.jpg"
+                             data-image="https://i.imgur.com/qUHDqPo.jpg"
+                             alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-wrapper" data-gallery="joker-gal">
+                <div class="atlas-4-artwork-image-wrapper">
+                    <div class="atlas-4-artwork-image-inner">
+                        <img class="gallery-image" src="https://i.imgur.com/HL4cP4X.jpg" alt="">
+                    </div>
+                    <div class="gallery-thumbnails">
+                        <img class="active gallery-thumbnail"
+                             src="https://i.imgur.com/HL4cP4X.jpg"
+                             data-image="https://i.imgur.com/HL4cP4X.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/PG3JSQd.jpg"
+                             data-image="https://i.imgur.com/PG3JSQd.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/kNjcRlm.jpg"
+                             data-image="https://i.imgur.com/kNjcRlm.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/E3E6wSI.jpg"
+                             data-image="https://i.imgur.com/E3E6wSI.jpg"
+                             alt="">
+                    </div>
+                </div>
+                <div class="atlas-4-artwork-content-wrapper">
+                    <div class="artwork-logo-wrapper">
+                        <h1 class="product-range-title">The Joker</h1>
+                    </div>
+                    <p>Guess who's back?! And this time, he's here to stay! We're unleashing The Joker ATLAS 4.0, back to roam the roads and terrorise the streets. Hold on, it's gonna' be one hell of a ride!</p>
+                </div>
+            </div>
+            <div class="gallery-wrapper reverse" data-gallery="elcobre-gal">
+                <div class="atlas-4-artwork-content-wrapper">
+                    <div class="artwork-logo-wrapper">
+                        <img src="https://i.imgur.com/2IKUm5R.png" alt="" />
+                    </div>
+                    <p>The iconic and intricate Calavera design with a sleek new copper colourway, it's the turn of El Cobre to rise from the dead. Inspired by the traditional 'Dia de los Muertos' Skull art, El Cobre makes a statement in style</p>
+                </div>
+                <div class="atlas-4-artwork-image-wrapper">
+                    <div class="atlas-4-artwork-image-inner">
+                        <img class="gallery-image" src="https://i.imgur.com/OsSWfFz.jpg" alt="">
+                    </div>
+                    <div class="gallery-thumbnails">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/0XbB0w7.jpg"
+                             data-image="https://i.imgur.com/0XbB0w7.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/hV8CIf2.jpg"
+                             data-image="https://i.imgur.com/hV8CIf2.jpg"
+                             alt="">
+                        <img class="active gallery-thumbnail"
+                             src="https://i.imgur.com/OsSWfFz.jpg"
+                             data-image="https://i.imgur.com/OsSWfFz.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/gSLsC2t.jpg"
+                             data-image="https://i.imgur.com/gSLsC2t.jpg"
+                             alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="atlas-4-product-range-title-wrapper full-width-content">
+            <div class="atlas-4-product-range-title-image">
+                <img src="https://i.imgur.com/1JGvAAK.png" alt="">
+                <span>Series</span>
+            </div>
+        </div>
+        <section id="paint" class="gallery-trigger-parent">
+            <div class="gallery-triggers">
+                <div class="gallery-trigger active" data-target="crimson-gal">
+                    <img src="https://i.imgur.com/kS7lRxF.jpg" alt="">
+                </div>
+                <div class="gallery-trigger" data-target="mercury-gal">
+                    <img src="https://i.imgur.com/UsQUloj.jpg" alt="">
+                </div>
+                <div class="gallery-trigger" data-target="commander-gal">
+                    <img src="https://i.imgur.com/UgJQBZB.jpg" alt="">
+                </div>
+                <div class="gallery-trigger" data-target="ultramarine-gal">
+                    <img src="https://i.imgur.com/S5Kc0Ie.jpg" alt="">
+                </div>
+                <div class="gallery-trigger" data-target="volt-gal">
+                    <img src="https://i.imgur.com/zfaeh2p.jpg" alt="">
+                </div>
+            </div>
+            <div class="gallery-wrapper active" data-gallery="crimson-gal">
+                <div class="atlas-4-artwork-image-wrapper">
+                    <div class="atlas-4-artwork-image-inner">
+                        <img class="gallery-image" src="https://i.imgur.com/kS7lRxF.jpg" alt="">
+                    </div>
+                    <div class="gallery-thumbnails">
+                        <img class="active gallery-thumbnail"
+                             src="https://i.imgur.com/kS7lRxF.jpg"
+                             data-image="https://i.imgur.com/kS7lRxF.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/t54PSar.jpg"
+                             data-image="https://i.imgur.com/t54PSar.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/myEMPvn.jpg"
+                             data-image="https://i.imgur.com/myEMPvn.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/g2BohF1.jpg"
+                             data-image="https://i.imgur.com/g2BohF1.jpg"
+                             alt="">
+                    </div>
+                </div>
+                <div class="atlas-4-artwork-content-wrapper">
+                    <div class="artwork-logo-wrapper">
+                        <img src="https://i.imgur.com/L1B2s6S.png" alt="" />
+                    </div>
+                    <p>The celebrity of the classic ATLAS colour-ways, and returning from historic drops, Crimson is back! Star of the big screen, this beautiful deep-red design, combined with a matte finish, is sure to steal the show.</p>
+                </div>
+            </div>
+            <div class="gallery-wrapper reverse" data-gallery="mercury-gal">
+                <div class="atlas-4-artwork-content-wrapper">
+                    <div class="artwork-logo-wrapper">
+                        <img src="https://i.imgur.com/LmSxHv8.png" alt="" />
+                    </div>
+                    <p>Another returning OG, the ultra-sleek Mercury is back. Featuring a brushed silver/grey effect combined with a gloss finish, this helmet will look out of this world on any ride!</p>
+                </div>
+                <div class="atlas-4-artwork-image-wrapper">
+                    <div class="atlas-4-artwork-image-inner">
+                        <img class="gallery-image" src="https://i.imgur.com/CiGIKWw.jpg" alt="">
+                    </div>
+                    <div class="gallery-thumbnails">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/UsQUloj.jpg"
+                             data-image="https://i.imgur.com/UsQUloj.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/776AYpR.jpg"
+                             data-image="https://i.imgur.com/776AYpR.jpg"
+                             alt="">
+                        <img class="active gallery-thumbnail"
+                             src="https://i.imgur.com/CiGIKWw.jpg"
+                             data-image="https://i.imgur.com/CiGIKWw.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/OUf1uUp.jpg"
+                             data-image="https://i.imgur.com/OUf1uUp.jpg"
+                             alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-wrapper" data-gallery="commander-gal">
+                <div class="atlas-4-artwork-image-wrapper">
+                    <div class="atlas-4-artwork-image-inner">
+                        <img class="gallery-image" src="https://i.imgur.com/UgJQBZB.jpg" alt="">
+                    </div>
+                    <div class="gallery-thumbnails">
+                        <img class="active gallery-thumbnail"
+                             src="https://i.imgur.com/UgJQBZB.jpg"
+                             data-image="https://i.imgur.com/UgJQBZB.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/OSnIoLJ.jpg"
+                             data-image="https://i.imgur.com/OSnIoLJ.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/YZSafys.jpg"
+                             data-image="https://i.imgur.com/YZSafys.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/rEpZmAp.jpg"
+                             data-image="https://i.imgur.com/rEpZmAp.jpg"
+                             alt="">
+                    </div>
+                </div>
+                <div class="atlas-4-artwork-content-wrapper">
+                    <div class="artwork-logo-wrapper">
+                        <img src="https://i.imgur.com/uqCJ9r5.png" alt="">
+                    </div>
+                    <p>Ready to lead from the front, this matte-finish army green is ready to ride into battle whenever the call comes.</p>
+                </div>
+            </div>
+            <div class="gallery-wrapper reverse" data-gallery="ultramarine-gal">
+                <div class="atlas-4-artwork-content-wrapper">
+                    <div class="artwork-logo-wrapper">
+                        <img src="https://i.imgur.com/ZN7LDPV.png" alt="" />
+                    </div>
+                    <p>An OG ATLAS colour-way, Ultramarine returns to the 4.0 lineup after making its debut in the original ATLAS drop. The vibrant sapphire blue features a gloss finish - ready for some blue-sky riding!</p>
+                </div>
+                <div class="atlas-4-artwork-image-wrapper">
+                    <div class="atlas-4-artwork-image-inner">
+                        <img class="gallery-image" src="https://i.imgur.com/oE6jHlc.jpg" alt="">
+                    </div>
+                    <div class="gallery-thumbnails">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/S5Kc0Ie.jpg"
+                             data-image="https://i.imgur.com/S5Kc0Ie.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/deudlps.jpg"
+                             data-image="https://i.imgur.com/deudlps.jpg"
+                             alt="">
+                        <img class="active gallery-thumbnail"
+                             src="https://i.imgur.com/oE6jHlc.jpg"
+                             data-image="https://i.imgur.com/oE6jHlc.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/TkVC7Ag.jpg"
+                             data-image="https://i.imgur.com/TkVC7Ag.jpg"
+                             alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-wrapper" data-gallery="volt-gal">
+                <div class="atlas-4-artwork-image-wrapper">
+                    <div class="atlas-4-artwork-image-inner">
+                        <img class="gallery-image" src="https://i.imgur.com/zfaeh2p.jpg" alt="">
+                    </div>
+                    <div class="gallery-thumbnails">
+                        <img class="active gallery-thumbnail"
+                             src="https://i.imgur.com/zfaeh2p.jpg"
+                             data-image="https://i.imgur.com/zfaeh2p.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/fKUY08E.jpg"
+                             data-image="https://i.imgur.com/fKUY08E.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/IiVYKrM.jpg"
+                             data-image="https://i.imgur.com/IiVYKrM.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/jNM0ucz.jpg"
+                             data-image="https://i.imgur.com/jNM0ucz.jpg"
+                             alt="">
+                    </div>
+                </div>
+                <div class="atlas-4-artwork-content-wrapper">
+                    <div class="artwork-logo-wrapper">
+                        <img src="https://i.imgur.com/i6Xpz7E.png" alt="">
+                    </div>
+                    <p>Make a bold statement with the electrifying Volt. This fluorescent yellow colour-way, combined with a gloss finish, cannot be missed and is sure to brighten up any rides.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="atlas-4-product-range-title-wrapper full-width-content">
+            <div class="atlas-4-product-range-title-image">
+                <img src="https://i.imgur.com/LLJ9oqf.png" alt="">
+                <span>Series</span>
+            </div>
+        </div>
+        <section id="carbon" class="gallery-trigger-parent">
+            <div class="gallery-triggers">
+                <div class="gallery-trigger active" data-target="nebulacarbon-gal">
+                    <img src="https://i.imgur.com/YLbUibe.jpg" alt="">
+                </div>
+                <div class="gallery-trigger" data-target="liquidcarbon-gal">
+                    <img src="https://i.imgur.com/IldZ93M.jpg" alt="">
+                </div>
+                <div class="gallery-trigger" data-target="rawcarbon-gal">
+                    <img src="https://i.imgur.com/TdbpnNf.jpg" alt="">
+                </div>
+            </div>
+            <div class="gallery-wrapper active" data-gallery="nebulacarbon-gal">
+                <div class="atlas-4-artwork-image-wrapper">
+                    <div class="atlas-4-artwork-image-inner">
+                        <img class="gallery-image" src="https://i.imgur.com/YLbUibe.jpg" alt="">
+                    </div>
+                    <div class="gallery-thumbnails">
+                        <img class="active gallery-thumbnail"
+                             src="https://i.imgur.com/YLbUibe.jpg"
+                             data-image="https://i.imgur.com/YLbUibe.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/zTLU2zn.jpg"
+                             data-image="https://i.imgur.com/zTLU2zn.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/pp1KGUm.jpg"
+                             data-image="https://i.imgur.com/pp1KGUm.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/Gc1b1hn.jpg"
+                             data-image="https://i.imgur.com/Gc1b1hn.jpg"
+                             alt="">
+                    </div>
+                </div>
+                <div class="atlas-4-artwork-content-wrapper">
+                    <div class="artwork-logo-wrapper">
+                        <h1 class="product-range-title">Nebula Carbon</h1>
+                    </div>
+                    <p>The out-of-this world beauty, inspired by the mesmeric hues of deep space Nebulae - Nebula Carbon. Featuring the exposed hand-laid space-grade T300 Carbon Fibre weave, coated in an iridescent gloss finish, with blue and purple hues. This helmet is ready to leave this galaxy in the dust...</p>
+                </div>
+            </div>
+            <div class="gallery-wrapper reverse" data-gallery="liquidcarbon-gal">
+                <div class="atlas-4-artwork-content-wrapper">
+                    <div class="artwork-logo-wrapper">
+                        <h1 class="product-range-title">Liquid Carbon</h1>
+                    </div>
+                    <p>An ultra-futuristic design crafted with expert precision and unrivaled passion. The Liquid Carbon features the exposed hand-laid T300 Carbon Fibre weave, with a gloss clear-coat to create the ultimate premium finish. A true work of art that will be the showcase of any ride.</p>
+                </div>
+                <div class="atlas-4-artwork-image-wrapper">
+                    <div class="atlas-4-artwork-image-inner">
+                        <img class="gallery-image" src="https://i.imgur.com/hRirHI3.jpg" alt="">
+                    </div>
+                    <div class="gallery-thumbnails">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/IldZ93M.jpg"
+                             data-image="https://i.imgur.com/IldZ93M.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/V0Wvb27.jpg"
+                             data-image="https://i.imgur.com/V0Wvb27.jpg"
+                             alt="">
+                        <img class="active gallery-thumbnail"
+                             src="https://i.imgur.com/hRirHI3.jpg"
+                             data-image="https://i.imgur.com/hRirHI3.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/VPsoCf3.jpg"
+                             data-image="https://i.imgur.com/VPsoCf3.jpg"
+                             alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-wrapper" data-gallery="rawcarbon-gal">
+                <div class="atlas-4-artwork-image-wrapper">
+                    <div class="atlas-4-artwork-image-inner">
+                        <img class="gallery-image" src="https://i.imgur.com/TdbpnNf.jpg" alt="">
+                    </div>
+                    <div class="gallery-thumbnails">
+                        <img class="active gallery-thumbnail"
+                             src="https://i.imgur.com/TdbpnNf.jpg"
+                             data-image="https://i.imgur.com/TdbpnNf.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/RDxkj5F.jpg"
+                             data-image="https://i.imgur.com/RDxkj5F.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/M5xxbBf.jpg"
+                             data-image="https://i.imgur.com/M5xxbBf.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/CptxATa.jpg"
+                             data-image="https://i.imgur.com/CptxATa.jpg"
+                             alt="">
+                    </div>
+                </div>
+                <div class="atlas-4-artwork-content-wrapper">
+                    <div class="artwork-logo-wrapper">
+                        <h1 class="product-range-title">Raw Carbon</h1>
+                    </div>
+                    <p>Our T300 space-grade Carbon Fibre shell, in all its raw glory, with the Raw Carbon. Returning to the ATLAS lineup, this helmet showcases our expertly hand-laid exposed carbon fibre weave, with a matte finish.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="atlas-4-product-range-title-wrapper full-width-content">
+            <div class="atlas-4-product-range-title-image">
+                <img src="https://i.imgur.com/MJHEgyi.png" alt="">
+                <span>Series</span>
+            </div>
+        </div>
+        <section id="base" class="gallery-trigger-parent">
+            <div class="gallery-triggers">
+                <div class="gallery-trigger active" data-target="ghost-gal">
+                    <img src="https://i.imgur.com/xr7BOZb.jpg" alt="">
+                </div>
+                <div class="gallery-trigger" data-target="core-gal">
+                    <img src="https://i.imgur.com/Vc6zY8a.jpg" alt="">
+                </div>
+            </div>
+            <div class="gallery-wrapper active" data-gallery="ghost-gal">
+                <div class="atlas-4-artwork-image-wrapper">
+                    <div class="atlas-4-artwork-image-inner">
+                        <img class="gallery-image" src="https://i.imgur.com/xr7BOZb.jpg" alt="">
+                    </div>
+                    <div class="gallery-thumbnails">
+                        <img class="active gallery-thumbnail"
+                             src="https://i.imgur.com/xr7BOZb.jpg"
+                             data-image="https://i.imgur.com/xr7BOZb.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src=https://i.imgur.com/8vHUZT1.jpg"
+                             data-image="https://i.imgur.com/8vHUZT1.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/OE9fH6q.jpg"
+                             data-image="https://i.imgur.com/OE9fH6q.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/OurX8wz.jpg"
+                             data-image="https://i.imgur.com/OurX8wz.jpg"
+                             alt="">
+                    </div>
+                </div>
+                <div class="atlas-4-artwork-content-wrapper">
+                    <div class="artwork-logo-wrapper">
+                        <h1 class="product-range-title">Ghost</h1>
+                    </div>
+                    <p>Summoned back into the ATLAS lineup, the Ghost returns. A bold white with a gloss finish, this helmet, is as fresh and clean as it comes. It's time to haunt the roads...</p>
+                </div>
+            </div>
+            <div class="gallery-wrapper reverse" data-gallery="core-gal">
+                <div class="atlas-4-artwork-content-wrapper">
+                    <div class="artwork-logo-wrapper">
+                        <h1 class="product-range-title">Core</h1>
+                    </div>
+                    <p>A true stealth-fighter for the road, the ATLAS 4.0 Core is THE staple design. The stealthy matte black lets the iconic ATLAS contours do the talking. The ultimate all-rounder, ready to ride!</p>
+                </div>
+                <div class="atlas-4-artwork-image-wrapper">
+                    <div class="atlas-4-artwork-image-inner">
+                        <img class="gallery-image" src="https://i.imgur.com/r0xmIxL.jpg" alt="">
+                    </div>
+                    <div class="gallery-thumbnails">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/Vc6zY8a.jpg"
+                             data-image="https://i.imgur.com/Vc6zY8a.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/wbP32WV.jpg"
+                             data-image="https://i.imgur.com/wbP32WV.jpg"
+                             alt="">
+                        <img class="active gallery-thumbnail"
+                             src="https://i.imgur.com/r0xmIxL.jpg"
+                             data-image="https://i.imgur.com/r0xmIxL.jpg"
+                             alt="">
+                        <img class="gallery-thumbnail"
+                             src="https://i.imgur.com/UMWyAsu.jpg"
+                             data-image="https://i.imgur.com/UMWyAsu.jpg"
+                             alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="visor">
+            <div class="atlas-4-product-range-title-wrapper full-width-content">
+                <div class="atlas-4-product-range-title-image">
+                    <h1 class="product-range-title">Buy 2 visors get 1 free</h1>
+                    <span>Customise your ATLAS 4.0</span>
+                </div>
+            </div>
+        </section>
+        <div class="atlas-4-product-list-wrapper">
+            <div class="atlas-4-product-inner-wrapper">
+                <div class="atlas-4-product-individual">
+                    <div class="atlas-4-product-list-image-wrapper">
+                        <img src="https://i.imgur.com/2OrAffu.jpg" alt="">
+                    </div>
+                    <h3 class="atlas-4-product-name">Fenrir with Gold Visor</h3>
+                </div>
+                <div class="atlas-4-product-individual">
+                    <div class="atlas-4-product-list-image-wrapper">
+                        <img src="https://i.imgur.com/OTJKjTY.jpg" alt="">
+                    </div>
+                    <h3 class="atlas-4-product-name">Surtr with Red Iridescent Visor</h3>
+                </div>
+                <div class="atlas-4-product-individual">
+                    <div class="atlas-4-product-list-image-wrapper">
+                        <img src="https://i.imgur.com/2TLXs17.jpg" alt="">
+                    </div>
+                    <h3 class="atlas-4-product-name">Jormungandr with Green Visor</h3>
+                </div>
+                <div class="atlas-4-product-individual">
+                    <div class="atlas-4-product-list-image-wrapper">
+                        <img src="https://i.imgur.com/gRFracV.jpg" alt="">
+                    </div>
+                    <h3 class="atlas-4-product-name">Mercury with Chrome Visor</h3>
+                </div>
+                <div class="atlas-4-product-individual">
+                    <div class="atlas-4-product-list-image-wrapper">
+                        <img src="https://i.imgur.com/eWD3CZQ.jpg" alt="">
+                    </div>
+                    <h3 class="atlas-4-product-name">Outrun with Clear Visor</h3>
+                </div>
+                <div class="atlas-4-product-individual">
+                    <div class="atlas-4-product-list-image-wrapper">
+                        <img src="https://i.imgur.com/bY293uq.jpg" alt="">
+                    </div>
+                    <h3 class="atlas-4-product-name">Ultramarine with Blue Visor</h3>
+                </div>
+                <div class="atlas-4-product-individual">
+                    <div class="atlas-4-product-list-image-wrapper">
+                        <img src="https://i.imgur.com/tCxsUFw.jpg" alt="">
+                    </div>
+                    <h3 class="atlas-4-product-name">Nebula Carbon with Pink Iridescent Visor</h3>
+                </div>
+                <div class="atlas-4-product-individual">
+                    <div class="atlas-4-product-list-image-wrapper">
+                        <img src="https://i.imgur.com/RLXQtUm.jpg" alt="">
+                    </div>
+                    <h3 class="atlas-4-product-name">Street King with Orange Low Light Visor</h3>
+                </div>
+                <div class="atlas-4-product-individual">
+                    <div class="atlas-4-product-list-image-wrapper">
+                        <img src="https://i.imgur.com/PawkJ5l.jpg" alt="">
+                    </div>
+                    <h3 class="atlas-4-product-name">Commander with Black Visor</h3>
+                </div>
+            </div>
+        </div>
+        <section id="tshirts">
+            <div class="atlas-4-product-range-title-wrapper full-width-content">
+                <div class="atlas-4-product-range-title-image">
+                    <h1 class="product-range-title">Special Edition Tees</h1>
+                    <span>Dropping tonight along side the ATLAS 4.0 helmets</span>
+                </div>
+            </div>
+        </section>
+        <div class="atlas-4-product-list-wrapper">
+            <div class="atlas-4-product-inner-wrapper">
+                <div class="atlas-4-product-individual">
+                    <div class="atlas-4-product-list-image-wrapper">
+                        <img src="https://i.imgur.com/YZO0TaE.jpg" alt="">
+                    </div>
+                    <h3 class="atlas-4-product-name">Fenrir T-shirt</h3>
+                </div>
+                <div class="atlas-4-product-individual">
+                    <div class="atlas-4-product-list-image-wrapper">
+                        <img src="https://i.imgur.com/6CFgkGC.jpg" alt="">
+                    </div>
+                    <h3 class="atlas-4-product-name">Jormungandr T-shirt</h3>
+                </div>
+                <div class="atlas-4-product-individual">
+                    <div class="atlas-4-product-list-image-wrapper">
+                        <img src="https://i.imgur.com/uKS1oIN.jpg" alt="">
+                    </div>
+                    <h3 class="atlas-4-product-name">Los Grafitos T-shirt</h3>
+                </div>
+                <div class="atlas-4-product-individual">
+                    <div class="atlas-4-product-list-image-wrapper">
+                        <img src="https://i.imgur.com/CiaJoaW.jpg" alt="">
+                    </div>
+                    <h3 class="atlas-4-product-name">Outrun T-shirt</h3>
+                </div>
+                <div class="atlas-4-product-individual">
+                    <div class="atlas-4-product-list-image-wrapper">
+                        <img src="https://i.imgur.com/cbIbA1H.jpg" alt="">
+                    </div>
+                    <h3 class="atlas-4-product-name">Street King T-shirt</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="chain-banner-wrapper first full-height full-width-content">
+        <div class="chain-banner-video">
+            <video autoplay muted loop playsinline src="https://i.imgur.com/qvcZLzl.mp4"></video>
+        </div>
+        <div class="chain-banner-content-wrapper">
+            <div class="chain-lead-banner-content">
+                <img class="app-icon" src="{{media url=&quot;chain/CHAIN-icon.png&quot;}}" alt="" />
+                <h1 class="chain-banner-title">Link up,<br>ride out</h1>
+                <h4 class="chain-sub-banner-title">Introducing Chain. a world first in rider to rider comms</h4>
+                <h5 class="chain-reveal-date">Available to download now</h5>
+                <div class="download-wrapper">
+                    <div class="download-button">
+                        <img src="https://i.imgur.com/Rv4JmVB.png" alt="" />
+                    </div>
+                    <div class="download-button">
+                        <img src="https://i.imgur.com/1KHQlR4.png" alt="" />
+                    </div>
+                </div>
+                <div class="usp-wrapper">
+                    <div class="usp-individual"><i class="fal fa-signal-stream"></i><span class="usp-text">Infinite Range</span></div>
+                    <div class="usp-individual"><i class="fal fa-users"></i><span class="usp-text">Unlimited Group Size</span></div>
+                    <div class="usp-individual"><i class="fal fa-signal"></i><span class="usp-text">Universal Compatibility</span></div>
+                </div>
+            </div>
+            <div class="chain-lead-banner-image">
+                <img src="https://i.imgur.com/m2huG2H.png" alt="" />
+            </div>
+        </div>
+    </div>
+    <div class="faq-wrapper" id="faqs">
+        <div class="faq-inner-wrapper">
+            <h2 class="product-range-title">You asked, we listened</h2>
+            <div class="faq-individual">
+                <h5 class="faq-question"><div class="question-inner">Is the helmet suitable for all seasons?</div><span><i class="fas fa-chevron-down"></i></span></h5>
+                <div class="faq-answer">
+                    <p>Yes; hot, cold, wet, windy, you name it. For hot/cold days, a discreet open/close vent switch has been added to the top vent. Easy to activate whilst riding if weather changes. In addition, the helmet is optimally sealed around the vents and visor to keep driving rain out on wet and windy days.</p>
+                    <img src="{{media url=&quot;atlas-4/at4-product-block-vent-comparison-v2.jpg&quot;}}" alt="" />
+                </div>
+            </div>
+            <div class="faq-individual">
+                <h5 class="faq-question"><div class="question-inner">What changes have been made to the internally to the helmet?</div><span><i class="fas fa-chevron-down"></i></span></h5>
+                <div class="faq-answer">
+                    <p>We have partnered with RHEON™ to create the ATLAS 4.0 enhanced comfort liner, the first of its kind to be used in motorcycle helmets, and a game-changer in rotational energy management. The all new cheek/comfort liner construction boasts up to seven layers of multi-density comfort foam with targeted areas of acoustic foam for the ultimate fit, comfort and noise reduction.</p>
+                    <img src="{{media url=&quot;atlas-4/at4-product-block-liner-comparison.jpg&quot;}}" alt="" />
+                </div>
+            </div>
+            <div class="faq-individual">
+                <h5 class="faq-question"><div class="question-inner">Is the helmet loud when riding?</div><span><i class="fas fa-chevron-down"></i></span></h5>
+                <div class="faq-answer">
+                    <p>Testing at Silverstone Wind-Tunnel comparing ATLAS 4.0 to competitors and previous ATLAS models showed acoustic performance on the ATLAS 4.0 is improved by 57%*, making it the quietest ATLAS ever produced. Full results of the testing can be viewed below.</p>
+                    <a class="atlas-4-btn-standard" href="{{media url=&quot;atlas-4/Ruroc_Atlas_4.0_Performance_Evaluation_Technical_Paper_V3.pdf&quot;}}">Download test results</a>
+                    <span class="caveat">*From ATLAS 3.0 vs our leading competitor.</span>
+                </div>
+            </div>
+            <div class="faq-individual">
+                <h5 class="faq-question"><div class="question-inner">Can I communicate with other riders while wearing the helmet?</div><span><i class="fas fa-chevron-down"></i></span></h5>
+                <div class="faq-answer">
+                    <p>The world’s first infinite range comms app for motorcyclists has been developed alongside ATLAS 4.0/ VOIP system can connect to any rider in the world using the app.</p>
+                    <a class="atlas-4-btn-standard" href="{{store direct_url='chain'}}">Learn More</a>
+                </div>
+            </div>
+            <div class="faq-individual">
+                <h5 class="faq-question"><div class="question-inner">Has the helmet been independently tested?</div><span><i class="fas fa-chevron-down"></i></span></h5>
+                <div class="faq-answer">
+                    <p>ATLAS 4.0 has been GLOBALLY independently tested; at Newton labs in Italy for impact attenuation development, at VIAS Institute in Belgium for development and ECE 22.06 certification, and at ACT Labs in China for DOT impact and penetration testing and certification. Alongside this ATLAS 2.0 and 3.0 have been granted a 4* SHARP rating, an evaluation that can only be achieved through independent purchase and test, and once ATLAS 4.0 is on sale this will be next on the list.</p>
+                    <img src="{{media url=&quot;atlas-4/at4-product-block-ece-comparison-v2.jpg&quot;}}" alt="" />
+                </div>
+            </div>
+            <div class="faq-individual">
+                <h5 class="faq-question"><div class="question-inner">When will helmets be shipped?</div><span><i class="fas fa-chevron-down"></i></span></h5>
+                <div class="faq-answer">
+                    <p>ATLAS 4.0 helmet sizes will each have one of three shipping statuses.</p>
+                    <span class="stock-status">Available now</span>
+                    <p>These items are physically in our warehouse and ready to dispatch immediately! Place your order today for this item and it will be processed and dispatched within 24 hours (excluding Saturday/Sunday) - always check if all items in your basket have the same stock status as this may cause your order to wait for the longest lead item.</p>
+                    <span class="stock-status">In transit</span>
+                    <p>Items with this status are in transit to the Ruroc HQ! This means these items are either in a plane or on a boat on their way to us as we speak. Once they land at HQ they will be ready to immediately dispatch by the date given above.</p>
+                    <span class="stock-status">In production</span>
+                    <p>These items are either in the paint shop or on the assembly line! This means your gear is being produced and will have spent no time sat on a shelf by the time it arrives with you meaning unlike when you purchase a helmet from a store that may have been on a shelf for over a year we can guarantee you’ll have the full life of your safety product! Pre-order these items now and you’ll be the first to get yours once they’ve arrived. They will dispatch within the month displayed.</p>
+                </div>
+            </div>
+            <div class="faq-individual">
+                <h5 class="faq-question"><div class="question-inner">What is your returns policy?</div><span><i class="fas fa-chevron-down"></i></span></h5>
+                <div class="faq-answer">
+                    <p>We offer returns or exchange up to 14 days after delivery. View our returns page below:</p>
+                    <a href="{{store direct_url='returns'}}" class="atlas-4-btn-standard">Returns Policy</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="final-support-wrapper">
+            <p class="final-support-message">Got a question and can't see the answer? Head over to our support page below where you can find all of our FAQs and a link to our How To videos, with all the tips and tricks to get the most out of your new helmet.</p>
+            <a href="https://support.ruroc.com/ " class="atlas-4-btn-standard atlas-4-btn-alternative"><span>Visit support page</span></a>
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
+<script>
+    $(function () {
+        var epoch = 1645142460,
+            date = epoch * 1000
+
+        // Visible countdown timer.
+        var mainCountdown = $('.countdown .counter .time').each(function () {
+            var current = $(this),
+                format = current.data('format');
+
+            current.countdown(date, function (e) {
+                current.text(e.strftime(format));
+            });
+        });
+
+        // Callback for when countdown is either stopped or finished.
+        var callbackCountdown = $('.finished-callback').countdown(date, function (event) {
+            var content = $('.content'),
+                hasFinished = event.type === 'stoped' || event.type === 'finish';
+
+            // Redirect to website.
+            if (hasFinished) {
+                content.replaceWith('<div class="content redirecting"><span>You will be redirected shortly.</span></div>');
+
+                $('.popup-wrapper').removeClass('enabled');
+                $('.overlay').removeClass('enabled');
+
+                setTimeout(function () {
+                    location.reload();
+                }, 5000);
+            }
+        });
+
+        window.dataLayer = window.dataLayer || [];
+        window.addEventListener("klaviyoForms", function (e) {
+            if (e.detail.type == 'submit') {
+                var metaData = e.detail.metaData;
+                var choices = [];
+                for (key in metaData) {
+                    if (metaData.hasOwnProperty(key)) {
+                        if (key.toLowerCase().indexOf("rg1") !== -1 || key.toLowerCase().indexOf("snow") !== -1) {
+                            choices.push('RG1-DX');
+                        } else if (key.toLowerCase().indexOf("atlas") !== -1 || key.toLowerCase().indexOf("moto") !== -1) {
+                            choices.push('ATLAS');
+                        }
+                    }
+                }
+
+                dataLayer.push({'event': 'klaviyoFormSubmit', 'klaviyoFormChoices': choices});
+            }
+        });
+
+        //Show / Hide Galleries
+        $('.gallery-wrapper').hide();
+        $('.gallery-wrapper.active').show();
+
+        function showGallery() {
+            $('.gallery-trigger').on('click', function () {
+                var target = $(this).data('target');
+
+                $(this).parent().find('.gallery-trigger').removeClass('active');
+                $(this).addClass('active');
+
+                $(this).closest('.gallery-trigger-parent').find('.gallery-wrapper').each(function () {
+                    var gallery = $(this).data('gallery');
+
+                    $(this).hide();
+
+                    if(target === gallery) {
+                        $(this).show();
+                    }
+                });
+            });
+        }
+
+        showGallery();
+
+        /**
+         * Initialize Gallery.
+         * @param element
+         */
+        function initGallery(element) {
+            var thumbnail = element.find('.gallery-thumbnail'),
+                image = element.find('.gallery-image');
+
+            // When any thumbnail in gallery is clicked.
+            thumbnail.on('click', function () {
+                var currentThumbnail = $(this);
+
+                // Remove active class from all thumbnails.
+                thumbnail.removeClass('active');
+
+                // Add active class to current thumbnail.
+                currentThumbnail.addClass('active');
+
+                // Update gallery image.
+                image.attr('src', currentThumbnail.data('image'));
+            });
+        }
+
+        // Loop over all artwork sections and initialize gallery.
+        $('.gallery-wrapper').each(function () {
+            initGallery($(this));
+        });
+
+        $('.faq-answer').hide();
+
+        $('.faq-question').on('click', function () {
+            var element = $(this),
+                isActive = element.hasClass('active');
+
+            // Remove all other classes from other FAQs.
+            $('.faq-question').not(element).removeClass('active');
+
+            // Toggle class on current element depending on whether it is already active or not.
+            element.toggleClass('active', !isActive);
+            window.scrollTo(0, element.context.offsetTop - (headerHeight + 20))
+        });
+    });
+</script>
+</html>
