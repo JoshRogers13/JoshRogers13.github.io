@@ -374,7 +374,7 @@
 
     .artwork-wrapper {
         background-color: black;
-        padding: 40px 0;
+        padding: 40px 0 0 0;
     }
 
     .atlas-4-product-range-title-wrapper {
@@ -432,6 +432,31 @@
         letter-spacing: 4px;
         text-transform: uppercase;
         color: white;
+    }
+
+    .atlas-4-product-range-title-image p {
+        color: white;
+        text-align: center;
+        max-width: 992px;
+        margin: 40px auto 0 auto;
+        font-size: 12px;
+    }
+
+    .shockwave-wrapper {
+        background-image: url('https://i.imgur.com/Juvjj4J.jpg');
+        background-position: center;
+        min-height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .shockwave-wrapper .atlas-4-product-range-title-wrapper {
+        background-image: none;
+    }
+
+    .shockwave-wrapper .atlas-4-product-range-title-wrapper:after {
+        content: none;
     }
 
     .gallery-triggers {
@@ -1073,6 +1098,10 @@
         text-transform: uppercase;
     }
 
+    #measureSection li {
+        font-size: 12px;
+    }
+
     @media (max-width: 768px) {
         .helmet-features-wrapper {
             flex-direction: column;
@@ -1419,6 +1448,15 @@
 
         .atlas-4-sizing-inner h2#recommendedSize .message.warning {
             font-size: 12px;
+        }
+
+        #measureSection li {
+            font-size: 14px;
+        }
+
+        .shockwave-wrapper {
+            background-image: url('https://i.imgur.com/3E2wNrr.jpg');
+            background-position: center;
         }
     }
 
@@ -2436,6 +2474,57 @@
                 </div>
             </div>
         </div>
+        <section id="visor">
+            <div class="atlas-4-product-range-title-wrapper full-width-content">
+                <div class="atlas-4-product-range-title-image">
+                    <h1 class="product-range-title">Get 10% off a jacket</h1>
+                    <span>When you purchase an ATLAS helmet</span>
+                </div>
+            </div>
+        </section>
+        <div class="atlas-4-product-list-wrapper">
+            <div class="atlas-4-product-inner-wrapper">
+                <div class="atlas-4-product-individual">
+                    <div class="atlas-4-product-list-image-wrapper">
+                        <img src="https://i.imgur.com/dpC4OK6.jpg" alt="">
+                    </div>
+                </div>
+                <div class="atlas-4-product-individual">
+                    <div class="atlas-4-product-list-image-wrapper">
+                        <img src="https://i.imgur.com/aORN4wp.jpg" alt="">
+                    </div>
+                </div>
+                <div class="atlas-4-product-individual">
+                    <div class="atlas-4-product-list-image-wrapper">
+                        <img src="https://i.imgur.com/73sMovH.jpg" alt="">
+                    </div>
+                </div>
+                <div class="atlas-4-product-individual">
+                    <div class="atlas-4-product-list-image-wrapper">
+                        <img src="https://i.imgur.com/wFjk7ic.jpg" alt="">
+                    </div>
+                </div>
+                <div class="atlas-4-product-individual">
+                    <div class="atlas-4-product-list-image-wrapper">
+                        <img src="https://i.imgur.com/mlyecTg.jpg" alt="">
+                    </div>
+                </div>
+                <div class="atlas-4-product-individual">
+                    <div class="atlas-4-product-list-image-wrapper">
+                        <img src="https://i.imgur.com/j6R7EMI.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="shockwave-wrapper">
+            <div class="atlas-4-product-range-title-wrapper full-width-content">
+                <div class="atlas-4-product-range-title-image">
+                    <h1 class="product-range-title">Bluetooth Audio</h1>
+                    <span>Get your shockwave and pair up to Chain</span>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                </div>
+            </div>
+        </div>
     </section>
     <div class="chain-banner-wrapper first full-height full-width-content">
         <div class="chain-banner-video">
@@ -2755,22 +2844,27 @@
         function selectSize(e) {
             var formInput = parseFloat(e.currentTarget.value);
             var currentInput = 0;
+            var currentUnit = inches ? 'in' : 'cm';
 
             // set different rounding for CM/IN
             if(inches){
-                currentInput = Math.floor(formInput * 100) / 100;
+                currentInput = Math.round(formInput * 100) / 100;
             } else {
-                currentInput = Math.floor(formInput * 10) / 10;
+                currentInput = Math.round(formInput * 10) / 10;
             }
 
             // Create an array to store measurements
             var measurementsArray = [];
 
+            // If raw input is
+            if (formInput >= 10 && formInput < sizesArray[0][currentUnit].min) {
+                changeRecommendation('<span class="message warning"><span>Your head size is outside the range of our smallest size. Please contact customer support for advice.</span></span>');
+                return;
+            }
+
             if(currentInput > 10){
                 sizesArray.forEach(function(size){
-
-                    // select the correct array of measurements depending on type (inches or cm)
-                    var currentMeasurement = inches ? size.in : size.cm;
+                    var currentMeasurement = size[currentUnit];
 
                     // Add each of these measurement objects into an array so its easier to find lowest and highest measurement
                     measurementsArray.push(currentMeasurement);
@@ -2781,6 +2875,7 @@
                     } else if (currentInput > measurementsArray[measurementsArray.length - 1].max){
                         changeRecommendation('<span class="message warning"><span>Your head size is outside the range of our biggest size. Please contact customer support for advice.</span></span>')
                     } else if (currentInput >= currentMeasurement.min && currentInput <= currentMeasurement.max){
+                        console.log(currentInput, currentMeasurement.min, currentMeasurement.max)
                         changeRecommendation('We recommend: <span class="helmet-size">' + size.size + '</span>')
                     }
                 })
