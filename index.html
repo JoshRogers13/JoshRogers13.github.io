@@ -937,15 +937,17 @@
     }
 
     .atlas-4-sizing-wrapper {
-        background-color: #a5a5a6;
-        background-position: 42% center;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-content: center;
         position: relative;
-        min-height: 100vh;
-        padding: 20px;
+        padding: 80px 20px;
+        background-color: #eee;
+        background-image: url("https://i.imgur.com/xp4Y9YV.png");
+        background-size: auto 40%;
+        background-position: center;
+        background-repeat: repeat;
     }
 
     .atlas-4-sizing-wrapper:before {
@@ -955,7 +957,7 @@
         bottom: 0;
         right: 0;
         left: 0;
-        background: rgba(#e9e8e4, 0.85);
+        background-image: linear-gradient(to right, rgba(233, 233, 233, 0), rgba(233, 233, 233, 1) 25%, rgba(233, 233, 233, 1) 75%, rgba(233, 233, 233, 0));
     }
 
     .atlas-4-sizing-inner {
@@ -965,7 +967,7 @@
         color: black;
         z-index: 2;
         width: 100%;
-        max-width: 600px;
+        max-width: 992px;
         margin: 0 auto;
     }
 
@@ -973,22 +975,24 @@
         font-size: 14px;
         text-transform: uppercase;
         font-weight: 500;
-        margin-bottom: 5px;
+        margin: 0;
     }
 
     .atlas-4-sizing-inner h2 {
         font-size: 20px;
         font-weight: 600;
+        margin: 0;
+        text-transform: uppercase;
     }
 
     .atlas-4-sizing-inner h2#recommendedSize {
         font-size: 12px;
         font-weight: 500;
         text-align: center;
-        margin-top: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
+        margin: 0;
     }
 
     .atlas-4-sizing-inner h2#recommendedSize .helmet-size {
@@ -1005,7 +1009,7 @@
         color: black;
         text-transform: none;
         text-align: left;
-        margin-top: -15px;
+        padding: 10px;
     }
 
     .atlas-4-sizing-wizard-wrapper {
@@ -1054,10 +1058,19 @@
         font-size: 16px;
         height: 40px;
         line-height: 1;
+        box-sizing: border-box;
     }
 
     .atlas-4-sizing-inner input::placeholder {
         font-size: 12px;
+    }
+
+    #measureSection {
+        margin-top: 40px;
+    }
+
+    #measureSection h3 {
+        text-transform: uppercase;
     }
 
     @media (max-width: 768px) {
@@ -1380,9 +1393,12 @@
             padding: 8px 15px;
         }
 
+        .atlas-4-sizing-wrapper {
+            padding: 160px 40px;
+        }
+
         .atlas-4-sizing-inner h2#recommendedSize {
             font-size: 16px;
-            margin-top: 30px;
         }
 
         .atlas-4-sizing-inner h2 {
@@ -1391,6 +1407,10 @@
 
         .atlas-4-sizing-inner h5 {
             font-size: 16px;
+        }
+
+        .atlas-4-sizing-inner input {
+            height: 47px;
         }
 
         .atlas-4-sizing-inner h2#recommendedSize .helmet-size {
@@ -1443,7 +1463,7 @@
 
         .atlas-4-sizing-inner h2 {
             font-size: 38px;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
         }
 
         .atlas-4-sizing-inner h5 {
@@ -1565,18 +1585,17 @@
                     </div>
                 </div>
                 <input id="sizingGuideInput" type="number" class="size-guide" step=".1" placeholder="Enter your head size (CM)...">
-                <a id="measureBtn" class="atlas-4-btn-standard atlas-4-btn-alternative"><span>How to measure correctly?</span></a>
                 <h2 id="recommendedSize"></h2>
             </div>
+            <div id="measureSection" class="atlas-4-content-wrapper video">
+                <h3>How to Measure</h3>
+                <ol>
+                    <li>With a cloth measuring tape, wrap it around your head just above your eyebrows and ears.</li>
+                    <li>Pull the tape comfortably tight. Take the measurement.</li>
+                    <li>Repeat once more and go with the largest reading.</li>
+                </ol>
+            </div>
         </div>
-    </div>
-    <div id="measureSection" class="atlas-4-content-wrapper video">
-        <h2>How to Measure</h2>
-        <ol>
-            <li>With a cloth measuring tape, wrap it around your head just above your eyebrows and ears.</li>
-            <li>Pull the tape comfortably tight. Take the measurement.</li>
-            <li>Repeat once more and go with the largest reading.</li>
-        </ol>
     </div>
     <section id="safety">
         <div class="safety-content-wrapper">
